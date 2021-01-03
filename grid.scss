@@ -6,15 +6,15 @@
 /* main containers */
 .outsidegrid{
   height: 76rem;
-  width: 41rem;
+  width: 35rem;
   margin:0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
 .grid{
-  width: 20.5rem;
-  height: 24rem;
+  width: 17.5rem;
+  height: 25rem;
   align-self: center;
   justify-self: center;
   justify-content: center;
@@ -31,7 +31,7 @@
 /* items for outside container */
 
 div.outsidegrid > header, div.outsidegrid > article, div.outsidegrid > div.outsidegridcellrepeatone, div.outsidegrid > div.outsidegridcellrepeattwo, div.outsidegrid > div.outsidegridcellrepeatthree, div.outsidegrid > div.outsidegridcellrepeatfour, div.outsidegrid > section.floatdepositname, div.outsidegrid > section.notes, div.outsidegrid > section.submit{
-  width: 41rem;
+  width: 35rem;
 }
 div.outsidegrid > header {
   grid-column: 1 / span 2;
@@ -43,12 +43,12 @@ div.outsidegrid > article {
   height: 6rem;
 }
 div.outsidegrid > div.outsidegridcellrepeatone, div.outsidegrid > div.outsidegridcellrepeattwo, div.outsidegrid > div.outsidegridcellrepeatthree, div.outsidegrid > div.outsidegridcellrepeatfour{
-  height: 24rem;
-  width: 20.5rem;
+  height: 25rem;
+  width: 17.5rem;
   }
 div.outsidegrid > section.floatdepositname{
   grid-column: 1 / span 2;
-  height:6rem;
+  height: 6rem;
   padding: 1rem;
   line-height: 2rem;
 }
@@ -65,7 +65,7 @@ div.outsidegrid > section.submit{
 
 div.grid > div.cell, div.grid > div.cellotherouter, div.grid > div.cellotherinner
  {
-  height: 1.43rem;
+  height: 1.5rem;
 }
 
 .title{
@@ -82,14 +82,16 @@ div.cellotherouter{
   grid-template-rows: 1fr;
 }
 div.cellotherinner{
-  width: 2.5rem;
-  height: 1rem;
-  justify-self: center;
-  align-self: center;
+  width: 2.4rem;
+  height: 1.4rem;
 }
 
 div.cellotherinner > input{
-  width: 2.6rem;
+  width: 2rem;
+}
+
+div.cell > input{
+  width: 5rem;
 }
 
 /* formating */
@@ -97,6 +99,7 @@ div.cellotherinner > input{
 div.grid > div.cell.label{
   font-weight: 900;
   text-align: center;
+  font-size: 0.85rem;
 }
 
 div.grid > div.cell > input, div.cellotherinner > input, div.outsidegrid > section.floatdepositname > input, div.outsidegrid > section.notes > div.align > textarea{
@@ -107,6 +110,10 @@ div.grid > div.cell > input, div.cellotherinner > input, div.outsidegrid > secti
 
 div.outsidegrid > section.notes > div.align {
   text-align: center;
+}
+
+div.outsidegrid > section.notes > div.align > textarea{
+  width: 34rem;
 }
 
 div.outsidegrid > section.notes > div.spacing, div.outsidegrid > section.submit{
