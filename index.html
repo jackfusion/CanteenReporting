@@ -1,1302 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="grid.css" />
-    <script type="text/javascript" src="totals.js"></script>
-    <title>Canteen Cash Reporting</title>
-  </head>
-  <body>
-    <center>
-      <a href="https://jackfusion.github.io">home</a> -
-      <a href="old-version.html">Original version of Canteen Cash Report</a>
-    </center>
-    <form
-      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBS3ysoquvGFFhlD45r2cAFxbTyRUk_PT7XuNwmGTVDPJm5Q/formResponse"
-      method="POST"
-      target="hidden_iframe"
-      onsubmit="Submitted=true;"
-    >
-      <div class="outsidegrid">
-        <header><h1>Canteen Cash Report</h1></header>
-        <article>
-          Please make sure that you review everything as being correct before
-          you click submit. Please enter in other currencies and the total in
-          the other boxes. Example ($50 * 1)($50.00). Please include american
-          currency in your counts and make note of the american currency in the
-          notes section. Example: there is $1 american or $5 american. The other
-          boxes are for new currencey that come into circulation.
-        </article>
-        <div class="outsidegridcellrepeatone">
-          <div class="grid">
-            <div class="title">Opening Cash</div>
-            <div class="cell"></div>
-            <div class="cell label">Quantity</div>
-            <div class="cell label">Total</div>
-            <div class="cell label">Example $ 0.25</div>
-            <div class="cell label">20</div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell label">$ 0.01</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.742589015"
-                size="10"
-                placeholder="0"
-                id="entry_1"
-                tabindex="1 "
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="grid.css" />
+  <script type="text/javascript" src="totals.js"></script>
+  <title>grid</title>
+</head>
+
+<body>
+  <center>
+    <a href="https://jackfusion.github.io">home</a> -
+    <a href="old-version.html">Original version of Canteen Cash Report</a>
+  </center>
+  <form
+    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeBS3ysoquvGFFhlD45r2cAFxbTyRUk_PT7XuNwmGTVDPJm5Q/formResponse"
+    method="POST" target="hidden_iframe" onsubmit="Submitted=true;">
+    <div class="outsidegrid">
+      <header class="header">
+        <h1>Canteen Cash Report</h1>
+      </header>
+      <article class="article">
+        Please make sure that you review everything as being correct before
+        you click submit. Please enter in other currencies and the total in
+        the other boxes. Example ($50 * 1)($50.00). Please include american
+        currency in your counts and make note of the american currency in the
+        notes section. Example: there is $1 american or $5 american. The other
+        boxes are for new currencey that come into circulation.
+      </article>
+      <div class="outsidegridcellrepeatone">
+        <div class="grid">
+          <div class="title" for="entry_81">Amount In Deposit Envelope</div>
+          <div class="cell"></div>
+          <div class="cell label">Quantity</div>
+          <div class="cell label">Total</div>
+          <div class="cell label">Example $ 0.25</div>
+          <div class="cell label">20</div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell label" for="entry_82">$ 0.01</div>
+          <div class="cell">
+            <input type="text" name="entry.742589015" size="10" placeholder="0" id="entry_1" tabindex="1 "
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.215971645" size="10" placeholder="$ 0.00" id="entry_2"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.05</div>
+          <div class="cell">
+            <input type="text" name="entry.1573188099" size="10" placeholder="0" id="entry_3" tabindex="2 "
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1251592375" size="10" placeholder="$ 0.00" id="entry_4"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.10</div>
+          <div class="cell">
+            <input type="text" name="entry.206502136" size="10" placeholder="0" id="entry_5" tabindex="3"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.995588730" size="10" placeholder="$ 0.00" id="entry_6"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.25</div>
+          <div class="cell">
+            <input type="text" name="entry.1013099482" size="10" placeholder="0" id="entry_7" tabindex="4 "
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.689753841" size="10" placeholder="$ 0.00" id="entry_8"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 1.00</div>
+          <div class="cell">
+            <input type="text" name="entry.226158028" size="10" placeholder="0" id="entry_9" tabindex="5"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.2062948474" size="10" placeholder="$ 0.00" id="entry_10"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 2.00</div>
+          <div class="cell">
+            <input type="text" name="entry.631443115" size="10" placeholder="0" id="entry_11" tabindex="6"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1069335831" size="10" placeholder="$ 0.00" id="entry_12"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell">
+            <input type="text" name="entry.2142258104" size="10" placeholder="0" id="entry_13" tabindex="7"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.2065817393" size="10" placeholder="$ 0.00" id="entry_14"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 10.00</div>
+          <div class="cell">
+            <input type="text" name="entry.792660538" size="10" placeholder="0" id="entry_15" tabindex="8"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1940245177" size="10" placeholder="$ 0.00" id="entry_16"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 20.00</div>
+          <div class="cell">
+            <input type="text" name="entry.641843307" size="10" placeholder="0" id="entry_17" tabindex="9"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1162797357" size="10" placeholder="$ 0.00" id="entry_18"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 50.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1506093710" size="10" placeholder="0" id="entry_19" tabindex="10"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.406819551" size="10" placeholder="$ 0.00" id="entry_20"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 100.00</div>
+          <div class="cell">
+            <input type="text" name="entry.366820310" size="10" placeholder="0" id="entry_21" tabindex="11"
+              onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1486851628" size="10" placeholder="$ 0.00" id="entry_22"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_104">Other</div>
+          <div class="cellotherouter">
+            <div class="cellotherinner">
+              <input type="text" name="entry.692066756" size="3" placeholder="$ 0" id="entry_23" tabindex="12"
+                onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
             </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.215971645"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_2"
-                onFocus="this.form.elements[0].focus()"
-              />
+            <div class="cellotherinner">
+              <input type="text" name="entry.1990618622" size="2" placeholder="0" id="entry_24" tabindex="13 "
+                onChange="runtotaloc()" onkeypress="return isNumberKey(event)" />
             </div>
-            <div class="cell label">$ 0.05</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1573188099"
-                size="10"
-                placeholder="0"
-                id="entry_3"
-                tabindex="2 "
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1251592375"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_4"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.10</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.206502136"
-                size="10"
-                placeholder="0"
-                id="entry_5"
-                tabindex="3"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.995588730"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_6"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.25</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1013099482"
-                size="10"
-                placeholder="0"
-                id="entry_7"
-                tabindex="4 "
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.689753841"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_8"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 1.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.226158028"
-                size="10"
-                placeholder="0"
-                id="entry_9"
-                tabindex="5"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2062948474"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_10"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 2.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.631443115"
-                size="10"
-                placeholder="0"
-                id="entry_11"
-                tabindex="6"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1069335831"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_12"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2142258104"
-                size="10"
-                placeholder="0"
-                id="entry_13"
-                tabindex="7"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2065817393"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_14"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 10.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.792660538"
-                size="10"
-                placeholder="0"
-                id="entry_15"
-                tabindex="8"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1940245177"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_16"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 20.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.641843307"
-                size="10"
-                placeholder="0"
-                id="entry_17"
-                tabindex="9"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1162797357"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_18"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 50.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1506093710"
-                size="10"
-                placeholder="0"
-                id="entry_19"
-                tabindex="10"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.406819551"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_20"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 100.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.366820310"
-                size="10"
-                placeholder="0"
-                id="entry_21"
-                tabindex="11"
-                onChange="runtotaloc()"
-                onkeypress="return isNumberKey(event)"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1486851628"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_22"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_23">Other</div>
-            <div class="cellotherouter">
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.692066756"
-                  size="3"
-                  placeholder="$ 0"
-                  id="entry_23"
-                  tabindex="12"
-                  onChange="runtotaloc()"
-                  onkeypress="return isNumberKey(event)"
-                />
-              </div>
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.1990618622"
-                  size="2"
-                  placeholder="0"
-                  id="entry_24"
-                  tabindex="13 "
-                  onChange="runtotaloc()"
-                  onkeypress="return isNumberKey(event)"
-                />
-              </div>
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2018891644"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_25"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_26">Total</div>
-            <div class="cell"></div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1211512380"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_26"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.2018891644" size="10" placeholder="$ 0.00" id="entry_25"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_107">Total</div>
+          <div class="cell"></div>
+          <div class="cell">
+            <input type="text" name="entry.1211512380" size="10" placeholder="$ 0.00" id="entry_26"
+              onFocus="this.form.elements[0].focus()" />
           </div>
         </div>
-        <div class="outsidegridcellrepeattwo">
-          <div class="grid">
-            <div class="title" for="entry_27">Total Cash for Day</div>
-            <div class="cell"></div>
-            <div class="cell label">Quantity</div>
-            <div class="cell label">Total</div>
-            <div class="cell label">Example $ 0.25</div>
-            <div class="cell label">20</div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell label">$ 0.01</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.966333080"
-                size="10"
-                placeholder="0"
-                id="entry_28"
-                tabindex="14"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.63074872"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_29"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.05</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.187475409"
-                size="10"
-                placeholder="0"
-                id="entry_30"
-                tabindex="15"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.644672692"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_31"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.10</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1324886589"
-                size="10"
-                placeholder="0"
-                id="entry_32"
-                tabindex="16"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1909081276"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_33"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.25</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.163806198"
-                size="10"
-                placeholder="0"
-                id="entry_34"
-                tabindex="17"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.869791405"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_35"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 1.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.149150270"
-                size="10"
-                placeholder="0"
-                id="entry_36"
-                tabindex="18"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1952030440"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_37"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 2.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.166956922"
-                size="10"
-                placeholder="0"
-                id="entry_38"
-                tabindex="19"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1041514166"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_39"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.860219773"
-                size="10"
-                placeholder="0"
-                id="entry_40"
-                tabindex="20"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.178432214"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_41"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 10.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1290877267"
-                size="10"
-                placeholder="0"
-                id="entry_42"
-                tabindex="21"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.831461914"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_43"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 20.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.677539031"
-                size="10"
-                placeholder="0"
-                id="entry_44"
-                tabindex="22"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1995670677"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_45"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 50.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1956809896"
-                size="10"
-                placeholder="0"
-                id="entry_46"
-                tabindex="23"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1623191362"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_47"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 100.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.757631994"
-                size="10"
-                placeholder="0"
-                id="entry_48"
-                tabindex="24"
-                onChange="runtotalcfd()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.701579278"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_49"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_50">Other</div>
-            <div class="cellotherouter">
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.1521276215"
-                  size="2"
-                  placeholder="$ 0"
-                  id="entry_50"
-                  tabindex="25"
-                  onChange="runtotalcfd()"
-                />
-              </div>
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.921722299"
-                  size="2"
-                  placeholder="0"
-                  id="entry_51"
-                  tabindex="26"
-                  onChange="runtotalcfd()"
-                />
-              </div>
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.385511893"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_52"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_53">Total</div>
-            <div class="cell"></div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.425111142"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_53"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="outsidegridcellrepeatthree">
-          <div class="grid">
-            <div class="title" for="entry_54">Closing Cash</div>
-            <div class="cell"></div>
-            <div class="cell label">Quantity</div>
-            <div class="cell label">Total</div>
-            <div class="cell label">Example $ 0.25</div>
-            <div class="cell label">20</div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell label" for="entry_55">$ 0.01</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1500653588"
-                size="10"
-                placeholder="0"
-                id="entry_55"
-                tabindex="27"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.754950398"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_56"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.05</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.94820587"
-                size="10"
-                placeholder="0"
-                id="entry_57"
-                tabindex="28"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1782954437"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_58"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.10</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.706843148"
-                size="10"
-                placeholder="0"
-                id="entry_59"
-                tabindex="29"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.141566355"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_60"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.25</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.873535750"
-                size="10"
-                placeholder="0"
-                id="entry_61"
-                tabindex="30"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1481105743"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_62"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 1.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1091288200"
-                size="10"
-                placeholder="0"
-                id="entry_63"
-                tabindex="31"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1092961723"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_64"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 2.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2093695501"
-                size="10"
-                placeholder="0"
-                id="entry_65"
-                tabindex="32"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.284081784"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_66"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1733636569"
-                size="10"
-                placeholder="0"
-                id="entry_67"
-                tabindex="34"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.371014651"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_68"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 10.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1375408437"
-                size="10"
-                placeholder="0"
-                id="entry_69"
-                tabindex="35"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2055155325"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_70"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 20.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1938238489"
-                size="10"
-                placeholder="0"
-                id="entry_71"
-                tabindex="36"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1032409441"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_72"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 50.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1256020135"
-                size="10"
-                placeholder="0"
-                id="entry_73"
-                tabindex="37"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1134598600"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_74"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 100.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1097030455"
-                size="10"
-                placeholder="0"
-                id="entry_75"
-                tabindex="38"
-                onChange="runtotalcc()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.400712067"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_76"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_77">Other</div>
-            <div class="cellotherouter">
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.1529612925"
-                  size="2"
-                  placeholder="$ 0"
-                  id="entry_77"
-                  tabindex="39"
-                  onChange="runtotalcc()"
-                />
-              </div>
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.1015643181"
-                  size="2"
-                  placeholder="0"
-                  id="entry_78"
-                  tabindex="40"
-                  onChange="runtotalcc()"
-                />
-              </div>
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.761428487"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_79"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_80">Total</div>
-            <div class="cell"></div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.382390636"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_80"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="outsidegridcellrepeatfour">
-          <div class="grid">
-            <div class="title" for="entry_81">Amount In Deposit Envelope</div>
-            <div class="cell"></div>
-            <div class="cell label">Quantity</div>
-            <div class="cell label">Total</div>
-            <div class="cell label">Example $ 0.25</div>
-            <div class="cell label">20</div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell label" for="entry_82">$ 0.01</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1479510084"
-                size="10"
-                placeholder="0"
-                id="entry_82"
-                tabindex="41"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.255015491"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_83"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.05</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1594563337"
-                size="10"
-                placeholder="0"
-                id="entry_84"
-                tabindex="42"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1765741585"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_85"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.10</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.783410276"
-                size="10"
-                placeholder="0"
-                id="entry_86"
-                tabindex="43"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.234085364"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_87"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 0.25</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1710370927"
-                size="10"
-                placeholder="0"
-                id="entry_88"
-                tabindex="44"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.195380811"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_89"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 1.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.815558334"
-                size="10"
-                placeholder="0"
-                id="entry_90"
-                tabindex="45"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.282223323"
-                size="10"
-                placeholder="$ 0.00"
-                class="ss-q-short"
-                id="entry_91"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 2.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1972566112"
-                size="10"
-                placeholder="0"
-                id="entry_92"
-                tabindex="46"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1713433849"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_93"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 5.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2095882834"
-                size="10"
-                placeholder="0"
-                id="entry_94"
-                tabindex="47"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1907516038"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_95"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 10.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.951193805"
-                size="10"
-                placeholder="0"
-                id="entry_96"
-                tabindex="48"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1330524767"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_97"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 20.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.2074649106"
-                size="10"
-                placeholder="0"
-                id="entry_98"
-                tabindex="49"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1074628815"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_99"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 50.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.1081631474"
-                size="10"
-                placeholder="0"
-                id="entry_100"
-                tabindex="50"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.276190882"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_101"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label">$ 100.00</div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.869135923"
-                size="10"
-                placeholder="0"
-                id="entry_102"
-                tabindex="51"
-                onChange="runtotalade()"
-              />
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.930129744"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_103"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_104">Other</div>
-            <div class="cellotherouter">
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.1353606566"
-                  size="2"
-                  placeholder="$ 0"
-                  id="entry_104"
-                  tabindex="52"
-                  onChange="runtotalade()"
-                />
-              </div>
-              <div class="cellotherinner">
-                <input
-                  type="text"
-                  name="entry.418978541"
-                  size="2"
-                  placeholder="0"
-                  id="entry_105"
-                  tabindex="53"
-                  onChange="runtotalade()"
-                />
-              </div>
-            </div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.926966920"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_106"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-            <div class="cell label" for="entry_107">Total</div>
-            <div class="cell"></div>
-            <div class="cell">
-              <input
-                type="text"
-                name="entry.372747244"
-                size="10"
-                placeholder="$ 0.00"
-                id="entry_107"
-                onFocus="this.form.elements[0].focus()"
-              />
-            </div>
-          </div>
-        </div>
-        <section class="floatdepositname">
-          <label for="entry_108"> Float Amount: </label>
-          <input
-            type="text"
-            name="entry.2049456338"
-            placeholder=""
-            id="entry_108"
-            onFocus="this.form.elements[0].focus()"
-          /><label for="entry_110"> Name: </label
-          ><input
-            type="text"
-            name="entry.2039179600"
-            placeholder=""
-            id="entry_110"
-            tabindex="54"
-          /><br /><label for="entry_109"> Deposit (Envelope) Amount: </label>
-          <input
-            type="text"
-            name="entry.1595519387"
-            placeholder=""
-            id="entry_109"
-            onFocus="this.form.elements[0].focus()"
-          />
-        </section>
-        <section class="notes">
-          <div class="spacing" for="entry_111">Notes:</div>
-          <div class="align">
-            <textarea
-              name="entry.360059540"
-              rows="8"
-              cols="75"
-              id="entry_111"
-              tabindex="55"
-            ></textarea>
-          </div>
-        </section>
-        <section class="submit">
-          <input type="hidden" name="pageNumber" placeholder="0" />
-          <input type="hidden" name="backupCache" placeholder="" />
-          <input
-            type="submit"
-            name="submit"
-            value="Submit"
-            tabindex="56"
-            onClick="window.location.reload()"
-          />
-        </section>
       </div>
-    </form>
-    <iframe
-      name="hidden_iframe"
-      id="hidden_iframe"
-      style="display: none"
-      onload="if (submitted) {window.location = ' http://www.yftg.ca/Untitled-5.html ';} "
-    >
-    </iframe>
-  </body>
+      <div class="outsidegridcellrepeattwo">
+        <div class="grid">
+          <div class="title" for="entry_81">Amount In Deposit Envelope</div>
+          <div class="cell"></div>
+          <div class="cell label">Quantity</div>
+          <div class="cell label">Total</div>
+          <div class="cell label">Example $ 0.25</div>
+          <div class="cell label">20</div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell label" for="entry_82">$ 0.01</div>
+          <div class="cell">
+            <input type="text" name="entry.966333080" size="10" placeholder="0" id="entry_28" tabindex="14"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.63074872" size="10" placeholder="$ 0.00" id="entry_29"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.05</div>
+          <div class="cell">
+            <input type="text" name="entry.187475409" size="10" placeholder="0" id="entry_30" tabindex="15"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.644672692" size="10" placeholder="$ 0.00" id="entry_31"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.10</div>
+          <div class="cell">
+            <input type="text" name="entry.1324886589" size="10" placeholder="0" id="entry_32" tabindex="16"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1909081276" size="10" placeholder="$ 0.00" id="entry_33"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.25</div>
+          <div class="cell">
+            <input type="text" name="entry.163806198" size="10" placeholder="0" id="entry_34" tabindex="17"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.869791405" size="10" placeholder="$ 0.00" id="entry_35"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 1.00</div>
+          <div class="cell">
+            <input type="text" name="entry.149150270" size="10" placeholder="0" id="entry_36" tabindex="18"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1952030440" size="10" placeholder="$ 0.00" id="entry_37"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 2.00</div>
+          <div class="cell">
+            <input type="text" name="entry.166956922" size="10" placeholder="0" id="entry_38" tabindex="19"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1041514166" size="10" placeholder="$ 0.00" id="entry_39"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell">
+            <input type="text" name="entry.860219773" size="10" placeholder="0" id="entry_40" tabindex="20"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.178432214" size="10" placeholder="$ 0.00" id="entry_41"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 10.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1290877267" size="10" placeholder="0" id="entry_42" tabindex="21"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.831461914" size="10" placeholder="$ 0.00" id="entry_43"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 20.00</div>
+          <div class="cell">
+            <input type="text" name="entry.677539031" size="10" placeholder="0" id="entry_44" tabindex="22"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1995670677" size="10" placeholder="$ 0.00" id="entry_45"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 50.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1956809896" size="10" placeholder="0" id="entry_46" tabindex="23"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1623191362" size="10" placeholder="$ 0.00" id="entry_47"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 100.00</div>
+          <div class="cell">
+            <input type="text" name="entry.757631994" size="10" placeholder="0" id="entry_48" tabindex="24"
+              onChange="runtotalcfd()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.701579278" size="10" placeholder="$ 0.00" id="entry_49"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_104">Other</div>
+          <div class="cellotherouter">
+            <div class="cellotherinner">
+              <input type="text" name="entry.1521276215" size="2" placeholder="$ 0" id="entry_50" tabindex="25"
+                onChange="runtotalcfd()" />
+            </div>
+            <div class="cellotherinner">
+              <input type="text" name="entry.921722299" size="2" placeholder="0" id="entry_51" tabindex="26"
+                onChange="runtotalcfd()" />
+            </div>
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.385511893" size="10" placeholder="$ 0.00" id="entry_52"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_107">Total</div>
+          <div class="cell"></div>
+          <div class="cell">
+            <input type="text" name="entry.425111142" size="10" placeholder="$ 0.00" id="entry_53"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+        </div>
+      </div>
+      <div class="outsidegridcellrepeatthree">
+        <div class="grid">
+          <div class="title" for="entry_81">Amount In Deposit Envelope</div>
+          <div class="cell"></div>
+          <div class="cell label">Quantity</div>
+          <div class="cell label">Total</div>
+          <div class="cell label">Example $ 0.25</div>
+          <div class="cell label">20</div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell label" for="entry_82">$ 0.01</div>
+          <div class="cell">
+            <input type="text" name="entry.1500653588" size="10" placeholder="0" id="entry_55" tabindex="27"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.754950398" size="10" placeholder="$ 0.00" id="entry_56"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.05</div>
+          <div class="cell">
+            <input type="text" name="entry.94820587" size="10" placeholder="0" id="entry_57" tabindex="28"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1782954437" size="10" placeholder="$ 0.00" id="entry_58"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.10</div>
+          <div class="cell">
+            <input type="text" name="entry.706843148" size="10" placeholder="0" id="entry_59" tabindex="29"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.141566355" size="10" placeholder="$ 0.00" id="entry_60"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.25</div>
+          <div class="cell">
+            <input type="text" name="entry.873535750" size="10" placeholder="0" id="entry_61" tabindex="30"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1481105743" size="10" placeholder="$ 0.00" id="entry_62"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 1.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1091288200" size="10" placeholder="0" id="entry_63" tabindex="31"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1092961723" size="10" placeholder="$ 0.00" id="entry_64"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 2.00</div>
+          <div class="cell">
+            <input type="text" name="entry.2093695501" size="10" placeholder="0" id="entry_65" tabindex="32"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.284081784" size="10" placeholder="$ 0.00" id="entry_66"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1733636569" size="10" placeholder="0" id="entry_67" tabindex="34"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.371014651" size="10" placeholder="$ 0.00" id="entry_68"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 10.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1375408437" size="10" placeholder="0" id="entry_69" tabindex="35"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.2055155325" size="10" placeholder="$ 0.00" id="entry_70"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 20.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1938238489" size="10" placeholder="0" id="entry_71" tabindex="36"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1032409441" size="10" placeholder="$ 0.00" id="entry_72"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 50.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1256020135" size="10" placeholder="0" id="entry_73" tabindex="37"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1134598600" size="10" placeholder="$ 0.00" id="entry_74"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 100.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1097030455" size="10" placeholder="0" id="entry_75" tabindex="38"
+              onChange="runtotalcc()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.400712067" size="10" placeholder="$ 0.00" id="entry_76"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_104">Other</div>
+          <div class="cellotherouter">
+            <div class="cellotherinner">
+              <input type="text" name="entry.1529612925" size="2" placeholder="$ 0" id="entry_77" tabindex="39"
+                onChange="runtotalcc()" />
+            </div>
+            <div class="cellotherinner">
+              <input type="text" name="entry.1015643181" size="2" placeholder="0" id="entry_78" tabindex="40"
+                onChange="runtotalcc()" />
+            </div>
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.761428487" size="10" placeholder="$ 0.00" id="entry_79"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_107">Total</div>
+          <div class="cell"></div>
+          <div class="cell">
+            <input type="text" name="entry.382390636" size="10" placeholder="$ 0.00" id="entry_80"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+        </div>
+      </div>
+      <div class="outsidegridcellrepeatfour">
+        <div class="grid">
+          <div class="title" for="entry_81">Amount In Deposit Envelope</div>
+          <div class="cell"></div>
+          <div class="cell label">Quantity</div>
+          <div class="cell label">Total</div>
+          <div class="cell label">Example $ 0.25</div>
+          <div class="cell label">20</div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell label" for="entry_82">$ 0.01</div>
+          <div class="cell">
+            <input type="text" name="entry.1479510084" size="10" placeholder="0" id="entry_82" tabindex="41"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.255015491" size="10" placeholder="$ 0.00" id="entry_83"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.05</div>
+          <div class="cell">
+            <input type="text" name="entry.1594563337" size="10" placeholder="0" id="entry_84" tabindex="42"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1765741585" size="10" placeholder="$ 0.00" id="entry_85"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.10</div>
+          <div class="cell">
+            <input type="text" name="entry.783410276" size="10" placeholder="0" id="entry_86" tabindex="43"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.234085364" size="10" placeholder="$ 0.00" id="entry_87"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 0.25</div>
+          <div class="cell">
+            <input type="text" name="entry.1710370927" size="10" placeholder="0" id="entry_88" tabindex="44"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.195380811" size="10" placeholder="$ 0.00" id="entry_89"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 1.00</div>
+          <div class="cell">
+            <input type="text" name="entry.815558334" size="10" placeholder="0" id="entry_90" tabindex="45"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.282223323" size="10" placeholder="$ 0.00" id="entry_91"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 2.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1972566112" size="10" placeholder="0" id="entry_92" tabindex="46"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1713433849" size="10" placeholder="$ 0.00" id="entry_93"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 5.00</div>
+          <div class="cell">
+            <input type="text" name="entry.2095882834" size="10" placeholder="0" id="entry_94" tabindex="47"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1907516038" size="10" placeholder="$ 0.00" id="entry_95"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 10.00</div>
+          <div class="cell">
+            <input type="text" name="entry.951193805" size="10" placeholder="0" id="entry_96" tabindex="48"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1330524767" size="10" placeholder="$ 0.00" id="entry_97"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 20.00</div>
+          <div class="cell">
+            <input type="text" name="entry.2074649106" size="10" placeholder="0" id="entry_98" tabindex="49"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.1074628815" size="10" placeholder="$ 0.00" id="entry_99"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 50.00</div>
+          <div class="cell">
+            <input type="text" name="entry.1081631474" size="10" placeholder="0" id="entry_100" tabindex="50"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.276190882" size="10" placeholder="$ 0.00" id="entry_101"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label">$ 100.00</div>
+          <div class="cell">
+            <input type="text" name="entry.869135923" size="10" placeholder="0" id="entry_102" tabindex="51"
+              onChange="runtotalade()" />
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.930129744" size="10" placeholder="$ 0.00" id="entry_103"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_104">Other</div>
+          <div class="cellotherouter">
+            <div class="cellotherinner">
+              <input type="text" name="entry.1353606566" size="2" placeholder="$ 0" id="entry_104" tabindex="52"
+                onChange="runtotalade()" />
+            </div>
+            <div class="cellotherinner">
+              <input type="text" name="entry.418978541" size="2" placeholder="0" id="entry_105" tabindex="53"
+                onChange="runtotalade()" />
+            </div>
+          </div>
+          <div class="cell">
+            <input type="text" name="entry.926966920" size="10" placeholder="$ 0.00" id="entry_106"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+          <div class="cell label" for="entry_107">Total</div>
+          <div class="cell"></div>
+          <div class="cell">
+            <input type="text" name="entry.372747244" size="10" placeholder="$ 0.00" id="entry_107"
+              onFocus="this.form.elements[0].focus()" />
+          </div>
+        </div>
+      </div>
+      <section class="floatdepositname">
+        <label for="entry_108"> Float Amount: </label><input type="text" name="entry.2049456338" placeholder=""
+          id="entry_108" onFocus="this.form.elements[0].focus()" />
+        <label for="entry_110"> Name: </label><input type="text" name="entry.2039179600" placeholder="" id="entry_110"
+          tabindex="54" />
+        <br /><label for="entry_109"> Deposit
+          (Envelope) Amount: </label>
+        <input type="text" name="entry.1595519387" placeholder="" id="entry_109"
+          onFocus="this.form.elements[0].focus()" />
+      </section>
+      <section class="notes">
+        <div class="spacing" for="entry_111">Notes:</div>
+        <div class="align">
+          <textarea name="entry.360059540" rows="8" cols="75" id="entry_111" tabindex="55"></textarea>
+        </div>
+      </section>
+      <section class="submit">
+        <input type="hidden" name="pageNumber" placeholder="0" />
+        <input type="hidden" name="backupCache" placeholder="" />
+        <input type="submit" name="submit" value="Submit" tabindex="56" onClick="window.location.reload()" />
+      </section>
+    </div>
+  </form>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+    onload="if (submitted) {window.location = ' http://www.yftg.ca/Untitled-5.html ';} ">
+  </iframe>
+</body>
+
 </html>

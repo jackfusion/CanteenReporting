@@ -3,20 +3,56 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* main containers */
 .outsidegrid {
-  height: 76rem;
-  width: 35rem;
+  height: 100%;
+  width: 40rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+  'header header'
+  'article article'
+  'outsidegridcellrepeatone outsidegridcellrepeattwo'
+  'outsidegridcellrepeatthree outsidegridcellrepeatfour'
+  'floatdepositname floatdepositname'
+  'notes notes'
+  'submitt submitt';
+}
+.header{
+  grid-area: header;
+}
+.article{
+  grid-area: article;
+}
+.outsidegridcellrepeatone{
+  grid-area: outsidegridcellrepeatone;
+}
+.outsidegridcellrepeattwo{
+  grid-area: outsidegridcellrepeattwo;
+}
+.outsidegridcellrepeatthree{
+  grid-area: outsidegridcellrepeatthree;
+}
+.outsidegridcellrepeatfour{
+  grid-area: outsidegridcellrepeatfour;
+}
+.floatdepositname{
+  grid-area: floatdepositname;
+}
+.notes{
+  grid-area: notes;
+}
+.submitt{
+  grid-area: submitt;
 }
 
-.grid {
+/* .outsidegrid, .article, .floatdepositname, .header, .notes, .outsidegridcellrepeatfour, .outsidegridcellrepeatone, .outsidegridcellrepeatthree, .outsidegridcellrepeattwo, .submitt{
+  border: 2px solid;
+} */
+
+.grid{
   width: 17.5rem;
   height: 25rem;
+  margin: 0 auto;
   align-self: center;
   justify-self: center;
   justify-content: center;
@@ -30,50 +66,40 @@
   padding: 0;
 }
 
-/* items for outside container */
-div.outsidegrid > header, div.outsidegrid > article, div.outsidegrid > div.outsidegridcellrepeatone, div.outsidegrid > div.outsidegridcellrepeattwo, div.outsidegrid > div.outsidegridcellrepeatthree, div.outsidegrid > div.outsidegridcellrepeatfour, div.outsidegrid > section.floatdepositname, div.outsidegrid > section.notes, div.outsidegrid > section.submit {
-  width: 35rem;
-}
-
 div.outsidegrid > header {
   grid-column: 1 / span 2;
   height: 3rem;
   text-align: center;
 }
-
 div.outsidegrid > article {
   grid-column: 1 / span 2;
-  height: 6rem;
+  height: 7rem;
 }
-
-div.outsidegrid > div.outsidegridcellrepeatone, div.outsidegrid > div.outsidegridcellrepeattwo, div.outsidegrid > div.outsidegridcellrepeatthree, div.outsidegrid > div.outsidegridcellrepeatfour {
+div.outsidegrid > div.outsidegridcellrepeatone, div.outsidegrid > div.outsidegridcellrepeattwo, div.outsidegrid > div.outsidegridcellrepeatthree, div.outsidegrid > div.outsidegridcellrepeatfour{
   height: 25rem;
-  width: 17.5rem;
-}
-
-div.outsidegrid > section.floatdepositname {
+  width: 100%;
+  }
+div.outsidegrid > section.floatdepositname{
   grid-column: 1 / span 2;
   height: 6rem;
-  padding: 1rem;
+  /* padding: 0.9rem; */
   line-height: 2rem;
 }
-
-div.outsidegrid > section.notes {
+div.outsidegrid > section.notes{
   grid-column: 1 / span 2;
   height: 10rem;
 }
-
-div.outsidegrid > section.submit {
+div.outsidegrid > section.submit{
   grid-column: 1 / span 2;
   height: 2.5rem;
 }
 
-/* items for inside container */
-div.grid > div.cell, div.grid > div.cellotherouter, div.grid > div.cellotherinner {
+div.grid > div.cell, div.grid > div.cellotherouter, div.grid > div.cellotherinner
+ {
   height: 1.5rem;
 }
 
-.title {
+.title{
   grid-column: 1 / span 3;
   grid-row: 1;
   height: 1.43rem;
@@ -81,48 +107,45 @@ div.grid > div.cell, div.grid > div.cellotherouter, div.grid > div.cellotherinne
   font-size: 1.2rem;
   text-align: center;
 }
-
-div.cellotherouter {
+div.cellotherouter{
   display: inline-grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
 }
-
-div.cellotherinner {
+div.cellotherinner{
   width: 2.4rem;
   height: 1.4rem;
 }
 
-div.cellotherinner > input {
+div.cellotherinner > input{
   width: 2rem;
 }
 
-div.cell > input {
+div.cell > input{
   width: 5rem;
 }
 
-/* formating */
-div.grid > div.cell.label {
+div.grid > div.cell.label{
   font-weight: 900;
   text-align: center;
   font-size: 0.85rem;
 }
 
-div.grid > div.cell > input, div.cellotherinner > input, div.outsidegrid > section.floatdepositname > input, div.outsidegrid > section.notes > div.align > textarea {
+div.grid > div.cell > input, div.cellotherinner > input, div.outsidegrid > section.floatdepositname > input, div.outsidegrid > section.notes > div.align > textarea{
   border-radius: 4px;
-  border: 2px solid #acacac;
-  outline-color: #acacac;
+  border: 2px solid rgb(172, 172, 172);
+  outline-color: rgb(172, 172, 172);
 }
 
 div.outsidegrid > section.notes > div.align {
   text-align: center;
 }
 
-div.outsidegrid > section.notes > div.align > textarea {
+/* div.outsidegrid > section.notes > div.align > textarea{
   width: 34rem;
-}
+} */
 
-div.outsidegrid > section.notes > div.spacing, div.outsidegrid > section.submit {
+div.outsidegrid > section.notes > div.spacing, div.outsidegrid > section.submit{
   margin-left: 1.2rem;
 }
 
@@ -138,16 +161,33 @@ div.outsidegrid > section.submit > input {
   background-color: #000000;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #868686;
+  box-shadow: 0 9px rgb(134, 134, 134);
 }
 
-div.outsidegrid > section.submit > input:hover {
-  background-color: #313131;
-}
+div.outsidegrid > section.submit > input:hover {background-color: #313131}
 
 div.outsidegrid > section.submit > input:active {
   background-color: #000000;
-  box-shadow: 0 5px #b6b6b6;
+  box-shadow: 0 5px rgb(182, 182, 182);
   transform: translateY(4px);
 }
-/*# sourceMappingURL=grid.css.map */
+
+@media (max-width: 500px){
+  .outsidegrid{
+    width: 100%;
+    grid-template-areas:
+  'header header'
+  'article article'
+  'outsidegridcellrepeatone outsidegridcellrepeatone'
+  'outsidegridcellrepeattwo outsidegridcellrepeattwo'
+  'outsidegridcellrepeatthree outsidegridcellrepeatthree'
+  'outsidegridcellrepeatfour outsidegridcellrepeatfour'
+  'floatdepositname floatdepositname'
+  'notes notes'
+  'submitt submitt';
+  }
+
+  section.notes > div.align > textarea {
+    width: 30rem;
+  }
+}
